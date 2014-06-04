@@ -26,7 +26,8 @@ $app['ftp.config'] = $app->protect( function() use ($configClass) {
 //-- Test to see if you can access ftp.config
 //print $app['ftp.config']()->toString();
 
-//-- Add GitModel to pimple container
-$app['ftp.view'] = function () {
-
+//-- Add Ftp Client to pimple container
+$app['ftp.view'] = function () use ($configClass){
+   return new \FtpView\FtpClient($configClass);
 };
+//print $app['ftp.view']->__toString();

@@ -14,8 +14,19 @@
 class ConfigClass
 {
   final public function  __construct() { }
-
+  
+  /**
+   *  Ftp client configuration 
+   *  @return url for ftp client connection
+   *  
+   */
+  final public static function url(){
+    return 'ftp.beautifullife.net.au';
+  }
+  
   final public static function toString(){
     return 'ConfigClassTest';
   }
+  
+
 }
